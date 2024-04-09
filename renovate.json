@@ -68,7 +68,7 @@
       ],
       "extractVersionTemplate": "(?<version>.*)$",
       "datasourceTemplate": "github-tags",
-      "depNameTemplate": "kubernetes/kubectl"
+      "depNameTemplate": "opentofu/opentofu"
     }
   ]
 }
