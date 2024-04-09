@@ -54,13 +54,13 @@
         "ARG VERSION_KUBECTL=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
       ],
       "depNameTemplate": "kubectl",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-tags"
     }
   ],
   "packageRules": [
     {
       "managers": ["regex"],
-      "datasources": ["github-releases"],
+      "datasources": ["github-tags"],
       "matchDepNames": ["kubernetes/kubectl"],
       "packageNames": ["kubectl"]
     }
