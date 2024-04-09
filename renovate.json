@@ -53,7 +53,7 @@
       "matchStrings": [
         "ARG VERSION_KUBECTL=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
       ],
-      "depNameTemplate": "kubectl",
+      "depNameTemplate": "kubernetes/kubectl",
       "datasourceTemplate": "github-releases"
     }
   ],
