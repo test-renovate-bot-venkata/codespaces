@@ -57,18 +57,6 @@
       "extractVersionTemplate": "^kubernetes-(?<version>.*)$",
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "kubernetes/kubectl"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "^.devcontainer/Dockerfile$"
-      ],
-      "matchStrings": [
-        "ARG VERSION_OPENTOFU=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
-      ],
-      "extractVersionTemplate": "(?<version>.*)$",
-      "datasourceTemplate": "github-tags",
-      "depNameTemplate": "opentofu/opentofu"
     }
   ]
 }
