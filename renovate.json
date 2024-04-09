@@ -44,6 +44,26 @@
     ]
   },
   "forkProcessing": "enabled",
-  "timezone": "America/Los_Angeles",
-  "schedule": ["before 6am"]
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG VERSION_KUBECTL=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+      ],
+      "depNameTemplate": "kubectl",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "packageRules": [
+    {
+      "managers": ["regex"],
+      "registryUrls": ["https://prometheus-community.github.io/helm-charts"],
+      "datasources": ["github-releases"],
+      "matchDepNames": ["kubernetes/kubectl"],
+      "packageNames": ["kubectl"]
+    }
+  ]
 }
