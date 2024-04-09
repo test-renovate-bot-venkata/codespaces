@@ -60,7 +60,6 @@
   "packageRules": [
     {
       "managers": ["regex"],
-      "registryUrls": ["https://prometheus-community.github.io/helm-charts"],
       "datasources": ["github-releases"],
       "matchDepNames": ["kubernetes/kubectl"],
       "packageNames": ["kubectl"]
