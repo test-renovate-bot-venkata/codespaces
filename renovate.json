@@ -62,7 +62,6 @@
       "managers": ["regex"],
       "datasources": ["github-tags"],
       "matchDepNames": ["kubernetes/kubectl"],
-      "packageNames": ["kubectl"]
     }
   ]
 }
