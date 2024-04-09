@@ -200,6 +200,25 @@
       "extractVersionTemplate": "(?<version>.*)$",
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "k3d-io/k3d"
-    }  
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^templates/application-kube-prometheus-stack-crds\\.yaml$"
+      ],
+      "matchStrings": [
+        "targetRevision: kube-prometheus-stack-(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+      ],
+      "depNameTemplate": "kube-prometheus-stack",
+      "datasourceTemplate": "helm"
+    }
+  ],
+  "packageRules": [
+    {
+      "managers": ["regex"],
+      "registryUrls": ["https://prometheus-community.github.io/helm-charts"],
+      "datasources": ["helm"],
+      "packageNames": ["kube-prometheus-stack"]
+    }
   ]
 }
