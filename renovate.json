@@ -45,7 +45,6 @@
   },
   "forkProcessing": "enabled",
   "customManagers": [
-    VERSION_OPENTOFU
     {
       "customType": "regex",
       "fileMatch": [
