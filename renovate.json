@@ -57,5 +57,5 @@
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "kubernetes/kubectl"
     }
-  ],
+  ]
 }
