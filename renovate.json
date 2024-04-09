@@ -51,7 +51,7 @@
         "^.devcontainer/Dockerfile$"
       ],
       "matchStrings": [
-        "ARG VERSION_KUBECTL=v(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+        "ARG VERSION_KUBECTL=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
       ],
       "extractVersionTemplate": "^kubernetes-(?<version>.*)$",
       "datasourceTemplate": "github-tags",
