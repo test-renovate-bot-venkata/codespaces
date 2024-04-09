@@ -68,6 +68,18 @@
       "extractVersionTemplate": "(?<version>.*)$",
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "opentofu/opentofu"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.devcontainer/Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG VERSION_HELM=(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+      ],
+      "extractVersionTemplate": "(?<version>.*)$",
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "helm/helm"
     }
   ]
 }
